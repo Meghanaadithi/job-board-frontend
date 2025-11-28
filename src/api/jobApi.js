@@ -1,16 +1,14 @@
-// src/api/jobApi.js
-console.log("API BASE URL:", BASE_URL);
-
-
+// -----------------------
+// MUST BE THE FIRST LINE
+// -----------------------
 const BASE_URL = "https://ts18uc5sb8.execute-api.us-east-1.amazonaws.com/prod";
 
 // GET /jobs
 export async function getJobs() {
-    const res = await fetch(`${BASE_URL}/jobs`);
-    const data = await res.json();
-    return data.jobs;
-  }
-  
+  const res = await fetch(`${BASE_URL}/jobs`);
+  const data = await res.json();
+  return data.jobs;
+}
 
 // POST /postJob
 export async function postJob({ title, company, location, description }) {
@@ -36,15 +34,8 @@ export async function applyJob({ name, email, jobId, resumeBase64 }) {
 
 // GET /listApplications
 export async function listApplications() {
-  const res = await fetch(`${BASE_URL}/listApplications`, {
-    method: "GET",
-    headers: { "Content-Type": "application/json" }
-  });
-
-  if (!res.ok) {
-    throw new Error("Failed to load applications");
-  }
-
+  const res = await fetch(`${BASE_URL}/listApplications`);
+  if (!res.ok) throw new Error("Failed to load applications");
   const data = await res.json();
   return data.applications;
 }
