@@ -17,7 +17,7 @@ export default function Navbar() {
         <nav className="space-x-6 text-gray-700 font-medium">
           <Link className="hover:text-blue-600" to="/">Home</Link>
           <Link className="hover:text-blue-600" to="/post">Post Job</Link>
-          <a href="/applications" className="nav-link">Admin Dashboard</a>
+          <Link className="hover:text-blue-600" to="/applications">Admin Dashboard</Link>
         </nav>
       </div>
     </motion.header>
