@@ -1,4 +1,6 @@
 // src/api/jobApi.js
+console.log("API BASE URL:", BASE_URL);
+
 
 const BASE_URL = "https://ts18uc5sb8.execute-api.us-east-1.amazonaws.com/prod";
 
