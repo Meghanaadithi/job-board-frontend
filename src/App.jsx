@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import JobDetails from "./pages/JobDetails";
@@ -8,7 +8,7 @@ import Applications from "./pages/Applications";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar />
       <div className="p-6">
         <Routes>
@@ -19,7 +19,7 @@ export default function App() {
           <Route path="/applications" element={<Applications />} />   
         </Routes>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

@@ -1,6 +1,5 @@
 {
   "homepage": "https://Meghanaadithi.github.io/job-board-frontend",
-
   "name": "job-board-frontend",
   "private": true,
   "version": "0.0.0",
@@ -10,7 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
-  },  
+  },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.17",
     "framer-motion": "^12.23.24",
